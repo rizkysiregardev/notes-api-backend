@@ -1,2 +1,4 @@
 node_modules
 my-notes-api-web-server.pem
+.env
+.prod.env

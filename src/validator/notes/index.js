@@ -1,10 +1,11 @@
+const InvariantError = require("../../exceptions/InvariantError");
 const { NotePayLoadSchema } = require("./schema");
 
 const NotesValidator = {
     validateNotePayload: (payload) => {
         const validationResult = NotePayLoadSchema.validate(payload);
         if(validationResult.error) {
-            throw new Error(validationResult.error.message);
+            throw new InvariantError(validationResult.error.message);
         }
     },
 };
